@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D1933B1-B7DF-4E58-BEAA-0BC9BD24C3C3}</ProjectGuid>
+    <RootNamespace>Koenma</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>engine</TargetName>
+    <OutDir>H:\bhgui\engines\test</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>
+      </WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);NDEBUG</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>268435456</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bitboard.cpp" />
+    <ClCompile Include="endgame.cpp" />
+    <ClCompile Include="evaluate.cpp" />
+    <ClCompile Include="init.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="misc.cpp" />
+    <ClCompile Include="movegen.cpp" />
+    <ClCompile Include="movepick.cpp" />
+    <ClCompile Include="pawns.cpp" />
+    <ClCompile Include="position.cpp" />
+    <ClCompile Include="psqt.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="thread.cpp" />
+    <ClCompile Include="timeman.cpp" />
+    <ClCompile Include="tt.cpp" />
+    <ClCompile Include="uci.cpp" />
+    <ClCompile Include="ucioption.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitboard.h" />
+    <ClInclude Include="bitcount.h" />
+    <ClInclude Include="endgame.h" />
+    <ClInclude Include="evaluate.h" />
+    <ClInclude Include="init.h" />
+    <ClInclude Include="magics.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="misc.h" />
+    <ClInclude Include="movegen.h" />
+    <ClInclude Include="movepick.h" />
+    <ClInclude Include="pawns.h" />
+    <ClInclude Include="position.h" />
+    <ClInclude Include="search.h" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="thread_win32.h" />
+    <ClInclude Include="timeman.h" />
+    <ClInclude Include="tt.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="uci.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
